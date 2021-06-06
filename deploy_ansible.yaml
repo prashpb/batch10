@@ -11,8 +11,10 @@
       name: docker
       state: started
       enabled: true
+  - name: Remove existing container
+    command: docker stop bootcamp
   - name: run docker image
-    command: sudo docker run -it -d -p 8888:8888 prashpb/bootcamp:1
+    command: docker run -it --name bootcamp -d -p 8888:8888 prashpb/bootcamp:1
   handlers:
   - name: run update
     apt:
