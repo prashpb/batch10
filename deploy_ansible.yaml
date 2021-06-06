@@ -13,6 +13,8 @@
       enabled: true
   - name: Remove existing container
     command: docker stop bootcamp
+  - name: Remove existing container
+    command: docker rm bootcamp
   - name: run docker image
     command: docker run -it --name bootcamp -d -p 8888:8888 prashpb/bootcamp:1
   handlers:

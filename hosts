@@ -1,1 +1,1 @@
-build-server
+build-server ansible_user=jenkins
